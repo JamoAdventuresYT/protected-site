@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Protected Site</title>
   <meta charset="UTF-8">
+  <title>RomRunner 3000</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+    h1 { color: #1a73e8; }
+    p { font-size: 18px; }
+  </style>
   <script>
-    // 🔒 Block unauthorized embeds
+    // 🔒 Only allow embed in your Google Site
+    const allowed = "https://sites.google.com/view/romrunner3000/romrunner";
     if (window.top !== window.self) {
-      const allowed = "https://sites.google.com/view/https://sites.google.com/view/romrunner3000/romrunner";
+      // Page is embedded somewhere
       if (!document.referrer.startsWith(allowed)) {
-        document.body.innerHTML = "<h1>Unauthorized Embed</h1>";
+        document.body.innerHTML = "<h1>Unauthorized Embed</h1><p>This content can only be viewed on the official site.</p>";
       }
     }
   </script>
 </head>
 <body>
-  <h1>Welcome to My Site!</h1>
-  <p>This content is protected — it will only show on my Google Site.</p>
+  <h1>Welcome to RomRunner 3000!</h1>
+  <p>This content is protected — it will only display on the official Google Site.</p>
+
+  <!-- Your site content below -->
+  <p>Here you can put your text, images, or anything you want to show.</p>
 </body>
 </html>
