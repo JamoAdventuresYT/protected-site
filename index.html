@@ -7,7 +7,7 @@
     // 🔒 Block unauthorized embeds:
     if (window.top !== window.self) {
       // Check if embedded inside your own Google Site
-      const allowed = "https://sites.google.com/isd728.org/rom-emulator/emulator?authuser=1";
+      const allowed = "https://sites.google.com/view/romrunner3000/romrunner";
       if (document.referrer.indexOf(allowed) !== 0) {
         document.body.innerHTML = "<h1>Unauthorized Embed</h1>";
       }
